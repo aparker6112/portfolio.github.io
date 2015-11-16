@@ -4,9 +4,10 @@
 			<h1>Adam Parker's portfolio</h1>
         </div> -->
 
+
         <% if user_signed_in? == true %>
         <ul class="nav navbar-nav navbar-right">
-            <li style="color: #505050;"><button class="btn btn-default"><%= link_to 'Log out', destroy_user_session_path, {:style=>'color: #FF5A00;'} %></button></li>
+            <li style="color: #505050;"><button class="btn btn-default"><%= link_to 'Log out', destroy_user_session_path, :method => :delete %></button></li>
         </ul>
                 <ul class="nav navbar-nav navbar-right">
             <li style="color: #505050;"><button class="btn btn-default"><%= link_to 'Login', user_session_path, {:style=>'color: #FF5A00;'} %></button></li>

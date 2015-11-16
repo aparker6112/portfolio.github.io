@@ -2,7 +2,12 @@
 
 	<div id="content">
 	<h2>About me</h2>
-		<p>Kitsch flannel tumblr banh mi biodiesel forage. Meggings pickled flexitarian chicharrones vegan, you probably haven't heard of them lumbersexual roof party. Salvia pug post-ironic, cred kitsch shoreditch selvage. Literally kitsch four loko, helvetica tote bag dreamcatcher ethical leggings. Artisan shabby chic helvetica, shoreditch bespoke venmo vice iPhone beard distillery church-key tousled etsy williamsburg. Farm-to-table DIY church-key direct trade, wolf freegan meditation YOLO single-origin coffee waistcoat. Ethical authentic squid beard roof party synth mustache drinking vinegar.</p>
+	<% if user_signed_in? == true %>
+		<p>User ID: <%= current_user.id %><br />
+			 Username: <%= current_user.username %>
+			 <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+			 <%= link_to "Profile", edit_user_registration_path %></p>
+	<% end %>
 		<p style="color: red; font-weight: bolder; text-decoration: underline;"><!-- Please note this website is underconstruction. This is not the final version. --></p>
 	</div>
 

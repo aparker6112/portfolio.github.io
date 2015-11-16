@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   # root 'welcome#index'
 
   root 'pages#index'
+  get 'userlist' => 'userlist#index'
+  get 'users/profile' => 'userlist#profile'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
