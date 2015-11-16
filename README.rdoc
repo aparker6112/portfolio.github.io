@@ -1,1 +1,0 @@
-Currently building portfolio however this time it will be using ruby on rails alongside angularJS and bootstrap.

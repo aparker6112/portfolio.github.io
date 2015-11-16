@@ -1,8 +1,0 @@
-<div id="content">
-	<h2>Users</h2>
-	<% @users.each do |user| %>
-	<ul>
-		<li class="style"><%= link_to user.username, edit_user_registration_path, {:style=>'color: #FF5A00;'} %></li>
-	</ul>
-	<% end %>
-</div>
