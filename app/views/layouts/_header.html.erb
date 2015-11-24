@@ -16,6 +16,19 @@
 				<li><%= link_to "Sign up", signup_path, class: "headFont" %></li>
 			<% else %>
 				<li class="headFont"><%= link_to "Welcome, #{current_user.username}", user_path(current_user.id), class: "headFont" %></li>
+				<li>
+
+<li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+
 				<li><%= link_to "Log out", logout_path, :method => :delete, class: "headFont" %></li>
 			<% end %>
 			</ul>
