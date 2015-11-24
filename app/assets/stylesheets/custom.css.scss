@@ -43,6 +43,26 @@
 	font-size: 1.7em;
 	letter-spacing: -2px;
 }
+
+.header-container {
+	border: 2px solid black;
+	width: 20%;
+}
+
+.button-container {
+	border: 1px solid black;
+}
+
+#header-logo {
+	font-weight: bold;
+	letter-spacing: -0.2px;
+}
+
+#profile-action {
+	 list-style-type: none;
+	 font-size: 1.2em;
+}
+
 #logo {
 	color: black;
 	font-weight: bold;
@@ -69,4 +89,8 @@
 	margin-left: auto;
 	margin-right: auto;
 	width: 60%;
+}
+
+#commentBorder {
+	padding-top: 15px;
 }
