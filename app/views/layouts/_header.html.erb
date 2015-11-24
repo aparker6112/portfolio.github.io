@@ -1,0 +1,24 @@
+<nav class="navbar navbar-inverse">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<%= link_to 'Adams portfolio', root_path, class: "navbar-brand" %>
+		</div>
+
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				<li><%= link_to 'Home', root_path, class: "headFont" %></li>
+				<li><%= link_to 'Users', users_path, class: "headFont" %></li>
+			</ul>
+
+			<ul class="nav navbar-nav navbar-right">
+			<% if !logged_in? %>
+				<li><%= link_to "Sign in", login_path, class: "headFont" %></li>
+				<li><%= link_to "Sign up", signup_path, class: "headFont" %></li>
+			<% else %>
+				<li class="headFont"><%= link_to "Welcome, #{current_user.username}", user_path(current_user.id), class: "headFont" %></li>
+				<li><%= link_to "Log out", logout_path, :method => :delete, class: "headFont" %></li>
+			<% end %>
+			</ul>
+		</div>
+	</div>
+</nav>

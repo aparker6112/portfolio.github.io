@@ -1,0 +1,8 @@
+<div class="jumbotron">
+<% if !logged_in? %>
+	<h1 id="logo">Welcome to Adam's portfolio</h1>
+	<%= link_to 'Sign up', signup_path, class: "btn btn-primary btn-lg", id: "buttonLogo" %>
+<% else %>
+		<h1 id="logo">Welcome, <%= current_user.username %></h1>
+<% end %>
+</div>
