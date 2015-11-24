@@ -1,2 +1,8 @@
+<% if current_user == @user %>
 <h1 align="center">Edit</h1>
 <%= render 'shared/form', obj: @user %>
+<% else %>
+<div class="alert alert-danger">
+	<h4>You do not have access to perform this action! <%= link_to "Return home", root_path %></h4>
+</div>
+<% end %>

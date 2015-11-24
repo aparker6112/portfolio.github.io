@@ -3,7 +3,12 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
-  helper_method :current_user, :logged_in?, :require_user
+  helper_method :current_user, :logged_in?, :require_user, :current_article
+
+  def current_article
+    @current_article ||= Article.first
+  end
+
   def current_user
   	@current_user ||= User.find(session[:user_id]) if session[:user_id]
   end
