@@ -43,13 +43,14 @@
 	</div>
 </div>
 <% end %>
-
-
-<%= form_for @comment do |f| %>
-	
-	<%= f.label :description %>
-	<%= f.text_field :description %>
-
-	<%= f.submit %>
-
+<% if logged_in? %>
+	<%= form_for(@comment, :html => {class: "form", role: "forms"}, :url => article_comments_path(@article)) do |comm| %>
+	<div class="container">
+		<div class="input-group input-group-md">
+				<%= comm.label :description %>
+				<%= comm.text_area :description, class: "form-control", placeholder: "Enter a comment" %>
+		</div>
+					<%= comm.submit "Post comment", class: "btn btn-primary btn-md" %>
+	</div>
+<% end %>
 <% end %>
