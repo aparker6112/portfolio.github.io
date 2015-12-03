@@ -1,0 +1,12 @@
+<div id="commentBorder">
+	<div class="panel panel-default">
+		<div class="panel-body">
+			<p><%= comment.description %></p>
+		</div>
+		<div class="panel-footer">
+			<div align="center">
+			<small>Created by <%= comment.user.username %>,<br />
+						<%= time_ago_in_words(comment.created_at) %> ago</small></div>
+		</div>
+	</div>
+</div>

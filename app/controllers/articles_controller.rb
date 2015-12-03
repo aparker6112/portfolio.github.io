@@ -1,15 +1,24 @@
 class ArticlesController < ApplicationController
 require 'comment'
+
+def index
+	@articles = Article.all
+end
+
 def new
 	@article = Article.new
 end
 
 def create
+	@articles = Article.all
 	@article = Article.new(article_params)
 	@article.user_id = current_user.id
 	if @article.save 
 			flash[:success] = "Post created successfully!"
-			redirect_to article_path(@article)
+			respond_to do |format|
+				format.html { redirect_to articles_path }
+				format.js
+			end
 	else
 		flash[:danger] = "We could not create you're article!"
 		render 'new'

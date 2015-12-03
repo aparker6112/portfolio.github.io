@@ -1,19 +1,21 @@
 class CommentsController < ApplicationController
-
+	before_action :get_article
 	def new
 
 	end
 
 	def create
-		@comment = Comment.new(comment_params)
-		@comment.article_id = params[:article_id]
+		@comment = @article.comment.new(comment_params)
 		@comment.user_id = current_user.id
 		if @comment.save
 			flash[:success] = "Successfully created comment"
-			redirect_to article_path(@comment.article)
+			respond_to do |format|
+				format.html { redirect_to article_path(@comment.article) }
+				format.js
+			end
 		else
 			flash[:danger] = "Failed to create comment"
-			redirect_to root_path
+			redirect_to article_path(@comment.article)
 		end
 	end
 
@@ -21,5 +23,9 @@ class CommentsController < ApplicationController
 
 	def comment_params
 		params.require(:comment).permit(:description)
+	end
+
+	def get_article
+		@article = Article.find(params[:article_id])
 	end
 end
