@@ -1,8 +1,36 @@
 <div class="jumbotron">
-<% if !logged_in? %>
-	<h1 id="logo">Welcome to Adam's portfolio</h1>
-	<%= link_to 'Sign up', signup_path, class: "btn btn-primary btn-lg", id: "buttonLogo" %>
-<% else %>
-		<h1 id="logo">Welcome, <%= current_user.username %></h1>
-<% end %>
+	<div class="col-md-12">
+		<div class="col-md-offset-3">
+			<h1 id="logo">
+			  <% if !logged_in? %>
+			  Welcome to Adam's portfolio<% else %>
+			  <%= current_user.username + ", 
+			  welcome to my portfolio" %><% end %></h1>
+		</div>
+		<div class="col-sm-offset-4">
+		<%= link_to 'Sign up', signup_path, class: "btn btn-primary btn-lg", id: "buttonLogo" if !logged_in? %>
+		</div>
+	</div>
+	<div class="col-md-12">
+		<div class="col-md-offset-7">
+				<h3 id="header-text">
+					You can find all off my experience by clicking this button below
+				</h3>
+		</div>
+
+		<div class="col-md-offset-8">
+		<%= link_to 'Experience', "#", class: "btn btn-primary btn-lg", id: "experience-button" %>
+		</div>
+	</div>
+
+	<div class="col-md-12">
+		<div class="col-md-offset-1">
+			<h3 id="header-text">
+				You can create your own articles by signing up and<br> clicking the to the link below
+			</h3>
+		</div>
+		<div class="col-md-offset-3">
+		<%= link_to 'Articles', articles_path, class: "btn btn-primary btn-lg", id: "article-button" %>
+		</div>
+	</div>
 </div>

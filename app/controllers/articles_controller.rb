@@ -7,9 +7,11 @@ end
 
 def new
 	@article = Article.new
+	redirect_to articles_path if !logged_in?
 end
 
 def create
+	redirect_to articles_path if !logged_in?
 	@articles = Article.all
 	@article = Article.new(article_params)
 	@article.user_id = current_user.id

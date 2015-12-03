@@ -1,22 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-.headFont {
-	color: white !important;
-	font-weight: bold;
-}
-
-.navbar-brand {
-	font-weight: bolder !important;
-	color: white !important;
-}
-
-.jumbotron {
-	background-image: asset-url('Background-sky.jpg');
-	background-size: cover;
-	height: 550px;
-}
-
 
 .footer {
 	color: grey;
@@ -65,22 +49,6 @@
 #profile-action {
 	 list-style-type: none;
 	 font-size: 1.2em;
-}
-
-#logo {
-	color: black;
-	font-weight: bold;
-	letter-spacing: -2px;
-	font-size: 2.7em;
-}
-
-#buttonLogo {
-	color: black;
-	background-color: lightblue;
-	position: absolute;
-	right: 50%;
-	width:10%;
-	height: 5%;
 }
 
 #login-form-control {

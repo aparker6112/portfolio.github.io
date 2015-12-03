@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
 	def signup
 		@user = User.new
+		redirect_to root_path if logged_in?
 	end
 
 	def index
@@ -15,6 +16,7 @@ class UsersController < ApplicationController
 		@user = User.new(user_params)
 		if @user.save
 			UserMailer.signup_confirmation(@user).deliver
+			session[:user_id] = @user.id
 			flash[:success] = "Successfully created account"
 			redirect_to root_path
 		else
@@ -36,6 +38,14 @@ class UsersController < ApplicationController
 			render 'edit'
 			flash[:danger] = "There was an error with your account!"
 		end
+	end
+
+	def destroy
+		@user = User.find(params[:id])
+		session[:user_id] = nil
+		@user.destroy
+		flash[:danger] = "The user #{@user.username} has been destroyed!"
+		redirect_to root_path
 	end
 
 	private

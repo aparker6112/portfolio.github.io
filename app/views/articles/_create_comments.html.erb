@@ -1,5 +1,5 @@
-<%= link_to "create comment", "#", id: "comment-link" %>
 <% if logged_in? %>
+<%= link_to "create comment", "#", id: "comment-link" %>
 <div id="create-comment">
 	<%= form_for(@comment, :html => {class: "form", role: "forms"}, :url => article_comments_path(@article), remote: true) do |comm| %>
 	<div class="container">

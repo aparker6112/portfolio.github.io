@@ -7,6 +7,10 @@
 			<div align="center">
 			<small>Created by <%= comment.user.username %>,<br />
 						<%= time_ago_in_words(comment.created_at) %> ago</small></div>
+					<div align="right">
+						<%= link_to "", "#", class: "glyphicon glyphicon-thumbs-up" %><span class="result">1</span>
+						<%= link_to "", "#", class: "glyphicon glyphicon-thumbs-down" %><span class="result">0</span>
+					</div> 
 		</div>
 	</div>
 </div>

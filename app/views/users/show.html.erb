@@ -9,11 +9,13 @@
 			<h4 id="header-logo">Profile actions</h4>
 			<div class="button-container">
 				<ul id="profile-action">
-					<li>Add friend</li>
-					<li>Button2</li>
-					<li>Button3</li>
-					<li>Button4</li>
+					<li><%= link_to "Add as a friend", "#" %></li>
+					<% if logged_in? && @user == current_user %>
+						<li><%= link_to "Edit profile", edit_user_path %></li>
+						<li><%= link_to "Delete profile", user_path, method: :delete %></li>
+					<% end %>
 				</ul>
 			</div>
 	</div>
+</div>
 </div>

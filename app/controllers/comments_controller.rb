@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
 	before_action :get_article
 	def new
-
+		redirect_to articles_path
 	end
 
 	def create

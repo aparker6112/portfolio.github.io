@@ -1,5 +1,7 @@
-<h1>Log in</h1>
-
+<div class="col-md-12">
+<div class="col-md-offset-4">
+	<h1>Login</h1>
+</div>
 <%= form_for(:session, :html => {class: "form", role: "forms"}, url: login_path) do |user| %>
 <div class="container">
 	<div class="well well-lg" id="login-form-control">
@@ -19,3 +21,4 @@
 	</div>
 </div>
 <% end %>
+</div>
