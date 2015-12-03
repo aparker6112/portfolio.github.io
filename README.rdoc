@@ -4,14 +4,12 @@
 
 The portfolio needs to include;-
 
-<ul>
-	<li> Photo </li>
-	<li> About me </li>
-	<li> Experience </li>
-	<li> Skills </li>
-	<li> Other websites </li>
-	<li> Login system </li>
-	<li> Use of AJAX </li>
-</ul
+	 Photo 
+	 About me 
+	 Experience 
+	 Skills 
+	 Other websites 
+	 Login system 
+	 Use of AJAX 
 
 This readme shall be updated more in the future.
