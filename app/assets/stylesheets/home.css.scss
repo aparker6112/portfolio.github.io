@@ -1,0 +1,72 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.jumbotron {
+	margin-top: 0%;
+	background-image: asset-url('Background-sky.jpg');
+	background-size: cover;
+	height: 550px;
+	width: 100%;
+}
+
+#logo {
+	color: black;
+	font-weight: bold;
+	letter-spacing: -2px;
+	font-size: 2.7em;
+}
+
+#buttonLogo {
+	color: white;
+	background-color: #33ccff;
+	font-size: 2.0em;
+}
+
+#buttonLogo:hover {
+	color: white;
+	background-color: #1ac6ff;
+	font-size: 2.0em;
+  -moz-box-shadow:    1px 1px 1px 1px #000000;
+  -webkit-box-shadow: 1px 1px 1px 1px #000000;
+  box-shadow:         1px 1px 1px 1px #000000;
+}
+
+#experience-button {
+	font-weight: normal;
+	color: white;
+	background-color: #ff5b33;
+	font-size: 2.0em;
+}
+
+#experience-button:hover {
+	font-weight: normal;
+	color: white;
+	background-color: #ff471a;
+	font-size: 2.0em;
+  -moz-box-shadow:    1px 1px 1px 1px #000000;
+  -webkit-box-shadow: 1px 1px 1px 1px #000000;
+  box-shadow:         1px 1px 1px 1px #000000;
+}
+
+#article-button {
+	font-weight: normal;
+	color: white;
+	background-color: #002266;
+	font-size: 2.0em;
+}
+
+#article-button:hover {
+	font-weight: normal;
+	color: white;
+	background-color: #002b80;
+	font-size: 2.0em;
+  -moz-box-shadow:    1px 1px 1px 1px #000000;
+  -webkit-box-shadow: 1px 1px 1px 1px #000000;
+  box-shadow:         1px 1px 1px 1px #000000;
+}
+
+#header-text {
+	color: black;
+	font-size: 2.8em;
+	font-weight: lighter;
+}

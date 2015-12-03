@@ -13,13 +13,13 @@
 
 			<ul class="nav navbar-nav navbar-right">
 			<% if !logged_in? %>
-				<li><%= link_to "Sign in", login_path, class: "headFont" %></li>
-				<li><%= link_to "Sign up", signup_path, class: "headFont" %></li>
+				<li id="login-button"><%= link_to "Sign in", login_path, class: "headFont" %></li>
+				<li id="login-button"><%= link_to "Sign up", signup_path, class: "headFont" %></li>
 			<% else %>
 				<li class="headFont"><%= link_to "Welcome, #{current_user.username}", user_path(current_user.id), class: "headFont" %></li>
 				<li>
 
-				<li><%= link_to "Log out", logout_path, :method => :delete, class: "headFont" %></li>
+				<li id="login-button"><%= link_to "Log out", logout_path, :method => :delete, class: "headFont" %></li>
 			<% end %>
 			</ul>
 		</div>

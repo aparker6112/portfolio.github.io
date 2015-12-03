@@ -1,4 +1,11 @@
-<h1>Articles</h1>
-	<%= render 'display', obj: @articles %>
-
-<%= link_to "New article", new_article_path, id: "create-article", remote: true %>
+<div class="col-md-12">
+	<div class="col-md-offset-4">
+		<h1>Articles</h1>
+	</div>
+	<div id="article-sector">
+			<%= render 'display', obj: @articles %>
+		<% if logged_in? %>
+			<%= link_to "New article", new_article_path, id: "create-article", remote: true %>
+		<% end %>
+	</div>
+</div>
