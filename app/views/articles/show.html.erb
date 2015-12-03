@@ -29,28 +29,8 @@
 		<% end %>
 	</div>
 
-<% @article.comment.each do |f| %>
-<div id="commentBorder">
-	<div class="panel panel-default">
-		<div class="panel-body">
-			<p><%= f.description %></p>
-		</div>
-		<div class="panel-footer">
-			<div align="center">
-			<small>Created by <%= f.user.username %>,<br />
-						<%= time_ago_in_words(f.created_at) %> ago</small></div>
-		</div>
-	</div>
+<div id="comments">
+	<%= render @article.comment %>
 </div>
-<% end %>
-<% if logged_in? %>
-	<%= form_for(@comment, :html => {class: "form", role: "forms"}, :url => article_comments_path(@article)) do |comm| %>
-	<div class="container">
-		<div class="input-group input-group-md">
-				<%= comm.label :description %>
-				<%= comm.text_area :description, class: "form-control", placeholder: "Enter a comment" %>
-		</div>
-					<%= comm.submit "Post comment", class: "btn btn-primary btn-md" %>
-	</div>
-<% end %>
-<% end %>
+
+	<%= render 'create_comments' %>

@@ -1,0 +1,16 @@
+<%= link_to "create comment", "#", id: "comment-link" %>
+<% if logged_in? %>
+<div id="create-comment">
+	<%= form_for(@comment, :html => {class: "form", role: "forms"}, :url => article_comments_path(@article), remote: true) do |comm| %>
+	<div class="container">
+		<div class="input-group input-group-md">
+				<%= comm.label :description %>
+				<%= comm.text_area :description, class: "form-control", placeholder: "Enter a comment" %>
+		</div>
+			<div id="comment-submit-button">		
+					<%= comm.submit "Post comment", { class: "btn btn-primary btn-md", id: "comment-created" } %>
+			</div>
+	</div>
+</div>
+<% end %>
+<% end %>
