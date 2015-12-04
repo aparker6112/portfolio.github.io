@@ -1,0 +1,16 @@
+{
+  "Jobs": {
+    "bookingbug": {
+      "responsibility": "My responsibilites at Bookingbug invole learning the core system, helping develop and test they're salesforce app and create technical documents and writing tests.",
+      "description": "BookingBug is growing quickly and we are looking to expand our development team to help manage the increasing number of businesses that are using BookingBug to take bookings online. The dev team is BookingBug’s core. Candidates must have the following: Exposure to Salesforce.com development (Apex / Visual force) Experience with Salesforce configuration Work experience with HTML, CSS and Javascript Evidence of a genuine interest in software development A Proactive ‘can do’ attitude Excellent communication skills, both written and verbal. Additional desired skills: An understanding of REST API’s An interest in learning AngularJS and Ruby on Rails A keen interest in mobile app development"
+    },
+    "otherjob": {
+      "responsibility": "Other Job: insert paragraph here",
+      "description": "Other Job: insert description here"
+    },
+    "anotherjob": {
+      "responsibility": "Another Job: insert paragraph here",
+      "description": "Another Job: insert description here"
+    }
+  }
+}
