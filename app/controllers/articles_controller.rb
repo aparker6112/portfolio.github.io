@@ -28,8 +28,8 @@ def create
 end
 
 def show
-  @user = User.find(params[:id])
 	@article = Article.find(params[:id])
+  @user = User.find(@article.user_id)
 	@comment = Comment.new
 end
 
