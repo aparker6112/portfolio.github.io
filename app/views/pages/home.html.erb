@@ -26,7 +26,11 @@
 	<div class="col-md-12">
 		<div class="col-md-offset-1">
 			<h3 id="header-text">
+			<% if !logged_in? %>
 				You can create your own articles by signing up and<br> clicking the to the link below
+			<% else %>
+				Now that you are logged in why don't you create an article<br> by clicking the button below?
+			<% end %>
 			</h3>
 		</div>
 		<div class="col-md-offset-3">
