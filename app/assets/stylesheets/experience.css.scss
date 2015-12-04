@@ -1,0 +1,46 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+#job-input {
+	width: 120%;
+}
+
+#background {
+	margin-top: 0%;
+	background-image: asset-url('Background-sky.jpg');
+	background-size: cover;
+	height: auto !important;
+	width: 100%;
+	overflow: auto;
+}
+
+#experience-header {
+	margin-top: 0%;
+	margin-bottom: 0%;
+	font-size: 1.3em;
+}
+
+#job-section {
+	width: 80%;
+}
+
+#job-response {
+	width: 40%;
+}
+
+#job-skills {
+	width: 40%;
+}
+
+#search {
+	padding-bottom: 1%;
+}
+
+#job-help {
+	color: white;
+}
+
+#danger {
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+}

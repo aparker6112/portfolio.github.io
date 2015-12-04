@@ -1,0 +1,67 @@
+<html ng-app="portfolio">
+	<body ng-controller="experienceController">
+<div class="jumbotron" id="background">
+<div class="alert alert-danger" id="danger">
+<p align="center">
+	Please note this feature is still in development
+</p>
+</div>
+		<div class="col-md-12">
+			<div class="col-md-offset-4">
+				<h1>some information</h1>
+			</div>
+			<div class="col-md-offset-5" id="search">
+				<div class="input-group input-group-md">
+					<h3 id="experience-header">Enter a job name</h3>
+					<input type="text" class="form-control" placeholder="Enter job" aria-describedby="sizing-addon3" id="job-input" ng-model="job">
+					<span class="help-block" id="job-help">Please enter a job name or pick one from below</span>
+				</div>
+			</div>
+
+			<div id="job-section" ng-switch on="job">
+				<div class="col-md-offset-8">
+					<div class="panel panel-info">
+						<div class="panel-heading">
+							<strong>Description</strong>
+						</div>
+						<div class="panel-body">
+							<p ng-switch-when="bookingbug">{{job_result.data.Jobs.bookingbug.description}}</p>
+							<p ng-switch-when="other">{{job_result.data.Jobs.otherjob.description}}</p>
+							<p ng-switch-when="another">{{job_result.data.Jobs.anotherjob.description}}</p>
+							<p ng-switch-default>Please select a previous or current job from above.</p>
+						</div>
+					</div>
+				</div>
+				<div id="job-response">
+					<div class="col-md-offset-2">
+						<div class="panel panel-info">
+							<div class="panel-heading">
+								<strong>Responsibility</strong>
+							</div>
+							<div class="panel-body">
+								<p ng-switch-when="bookingbug">{{job_result.data.Jobs.bookingbug.responsibility}}</p>
+								<p ng-switch-when="other">{{job_result.data.Jobs.otherjob.responsibility}}</p>
+								<p ng-switch-when="another">{{job_result.data.Jobs.anotherjob.responsibility}}</p>
+								<p ng-switch-default>Please search for a job or pick one from below.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			<div id="job-skills"
+				<div class="col-md-offset-5">
+					<div class="panel panel-info">
+						<div class="panel-heading">
+							<strong>skills</strong>
+						</div>
+						<div class="panel-body">
+							<p ng-switch-default>Please search for a job or pick one from below.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+	</body>
+</html>
