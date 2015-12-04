@@ -1,8 +1,17 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+#article-header {
+	color: black;
+	font-weight: bold;
+}
+
 #article-sector {
 	width: 40%;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+#articles {
+  width: 50%;
 }
