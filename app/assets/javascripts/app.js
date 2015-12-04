@@ -5,7 +5,7 @@ portfolio.controller('experienceController', ['$scope', '$http', '$log',  functi
 
 	$http({
 		method: 'GET',
-		url: '/assets/jobs.JSON',
+		url: 'http://adams-portfolio.herokupp.com/assets/jobs.JSON',
 	}).then(function successCallback(response) {
 			$scope.job_result = response;
 			$log.info($scope.job_result);
